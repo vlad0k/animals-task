@@ -3,6 +3,7 @@ class Animals {
         this.name = name;
         this.expressions = expressions;
     }
+    
     getNotification(i){
         var bar = document.createElement('div');
         bar.id = 'snackBar' + (i+1);
@@ -14,6 +15,7 @@ class Animals {
         }, 3000);
     };
 }
+
 var params = {
     "fox": [
         'Лиса',
@@ -34,7 +36,9 @@ var params = {
         'Кабан санитар леса'
     ]
 }
+
 var buttons = [...document.getElementsByClassName('button_showMessage')];
+
 buttons.forEach((elem, i) => {
     elem.onclick = () => {
         var select = document.getElementById("mySelect").value;

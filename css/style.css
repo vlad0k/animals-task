@@ -1,38 +1,23 @@
-.block{
-    display: flex;
-    max-width: 1280px;
-    margin:  auto;
-    background-color: antiquewhite;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .button{
     background-color: #F6E9D3;
     color: black;
     padding: 14px 25px;
     text-align: center;
-    text-decoration: none;
-    border: 1px solid #000000;
+    border: 1px solid black;
     display: inline-block;
+    margin-bottom : 20px;
+    outline: none;
 }
 .button:hover{
-    background-color: #F6E9D3;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
-table,th, td{
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
-th, td{
-    padding: 5px;
-}
-.chengeAlign{
-    text-align: center;
-}
-.margin{
-    margin: 15px;
-}
+
 #snackBar1{
     min-width: 250px;
     background-color: green;
