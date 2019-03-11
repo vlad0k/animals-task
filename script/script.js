@@ -4,7 +4,6 @@ class Animals {
         this.expressions = expressions;
     }
     getNotification(i){
-        console.log(this.expressions);
         var bar = document.createElement('div');
         bar.id = 'snackBar' + (i+1);
         bar.innerHTML = (this.expressions[i]);
