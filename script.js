@@ -1,6 +1,6 @@
 class Animals {
-    constructor(i, ...expressions) {
-        this.barId = i;
+    constructor(barId, ...expressions) {
+        this.barId = barId;
         this.expressions = expressions;
     }
     getNotification(){
@@ -34,8 +34,8 @@ var params = {
 var buttons = [...document.getElementsByClassName('button_showMessage')];
 buttons.forEach((elem, i) => {
     elem.onclick = () => {
-        var select = document.getElementById("mySelect").value;
-        var bar = new Animals(i, ...params[select])
+        var selectValue = document.getElementById("mySelect").value;
+        var bar = new Animals(i, ...params[selectValue])
         bar.getNotification();
     }
 })
