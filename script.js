@@ -1,11 +1,12 @@
 class Animals {
-    constructor(...expressions) {
+    constructor(i, ...expressions) {
+        this.barId = i;
         this.expressions = expressions;
     }
-    getNotification(i){
+    getNotification(){
         var bar = document.createElement('div');
-        bar.id = 'snackBar' + (i+1);
-        bar.innerHTML = this.expressions[i];
+        bar.className = 'snackBar' + (this.barId+1);
+        bar.innerHTML = this.expressions[this.barId];
         document.body.appendChild(bar);
         bar.onclick = event => event.target.remove();
         setTimeout(()=>{
@@ -34,7 +35,7 @@ var buttons = [...document.getElementsByClassName('button_showMessage')];
 buttons.forEach((elem, i) => {
     elem.onclick = () => {
         var select = document.getElementById("mySelect").value;
-        var bar = new Animals(...params[select])
-        bar.getNotification(i);
+        var bar = new Animals(i, ...params[select])
+        bar.getNotification();
     }
 })
